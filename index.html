@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop zone para cargar archivos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="dropbox" class="upload_area">
+
+            <h2 id="upload_text">ARRASTRA TUS ARCHIVOS AQUI!!!</h2>
+            <div id="loader"></div>
+            <p id="fileList"></p>
+            <p id="succes"></p>
+
+        </div>
+
+        <div class="login_area">
+            <div>
+                <h2>Bienvenido a DDrop</h2>
+                <p>Para subir tus archivos de forma simple a drive puedes hacer Login a traves de Google</p> <br>
+                <hr>
+                <button class="btn_login" onclick="openLogin()">Login con Google</button>
+            </div>
+        </div>
+
+        <div class="upload_btn_area">
+            <button class="upload_btn" onclick="upload()">subir archivos</button>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage">Some text in the Modal..</p>
+            <button class="closeModal" onclick="closeModal()">cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalLogin" class="modal">
+
+        <div class="modal-content">
+            <label for="name">NOMBRE</label> <br>
+            <input id="name" type="text">
+            <br>
+            <label for="password">PASSWORD</label> <br>
+            <input id="password" type="password">
+            <br>
+            <button class="closeModal" onclick="closeLogin()">cerrar</button>
+
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
