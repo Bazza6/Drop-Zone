@@ -1,20 +1,27 @@
-* {
-  color: white;
+html {
+  background-color: black;
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: black;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+
+body {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
 h2 {
   text-align: center;
 }
 
 .container {
   height: 100vh;
-  padding: 60px;
+  padding: 80px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 6fr 1fr;
@@ -25,7 +32,7 @@ h2 {
     "upload_btn_area .";
 }
 .upload_area {
-  box-shadow: 0px 0px 150px -30px green;
+  box-shadow: 0px 0px 180px -10px green;
   border-radius: 105x;
   grid-area: upload_area;
   display: flex;
@@ -49,16 +56,19 @@ h2 {
   align-items: center;
 }
 .upload_btn {
+  color: white;
   width: 100%;
   height: 3rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 10px;
   background-color: rgba(0, 128, 0, 0.8);
 }
 .btn_login {
+  color: white;
   margin-top: 2rem;
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   background-color: black;
 }
 
@@ -66,16 +76,16 @@ h2 {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
