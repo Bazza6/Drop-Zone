@@ -14,12 +14,9 @@
     <div class="container">
 
         <div id="dropbox" class="upload_area">
-
             <h2 id="upload_text">ARRASTRA TUS ARCHIVOS AQUÍ</h2>
             <div id="loader"></div>
             <p id="fileList"></p>
-            <p id="succes"></p>
-
         </div>
 
         <div class="login_area">
@@ -36,27 +33,23 @@
         </div>
     </div>
 
-    <div id="myModal" class="modal">
+    <div id="modalUpload" class="modal">
         <div class="modal-content">
-            <p id="modalMessage">Some text in the Modal..</p>
+            <p id="modalMessage"></p>
             <button class="closeModal" onclick="closeModal()">cerrar</button>
         </div>
     </div>
 
-
     <div id="modalLogin" class="modal">
-
         <div class="modal-content">
-            <label for="name">nombre</label> <br>
+            <label for="name">nombre:</label>
             <input id="name" type="text">
             <br>
-            <label for="password">password</label> <br>
+            <label for="password">password:</label>
             <input id="password" type="password">
             <br>
             <button class="closeModal" onclick="login()">LOGIN</button>
-
         </div>
-
     </div>
 
     <script src="./main.js"></script>

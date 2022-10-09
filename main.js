@@ -1,17 +1,13 @@
-
 let archivos = [];
-let dropbox;
 let displayList = '';
 let fileList = document.getElementById("fileList");
 let uploadText = document.getElementById('upload_text');
 let loadingAnimation = document.getElementById('loader');
-let succesMessage = document.getElementById('succes');
 let modalMessage = document.getElementById('modalMessage');
-
-let modal = document.getElementById("myModal");
+let modal = document.getElementById("modalUpload");
 let modalLogin = document.getElementById("modalLogin");
+let dropbox = document.getElementById("dropbox");
 
-dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
 dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
@@ -78,15 +74,15 @@ function openModal() {  // display results
     let random = Math.random();
     if (random < 0.6) {
         if (archivos.length === 1) {
-            modalMessage.innerHTML = `<p>el archivo:</p> ${displayList} <p>se ha subido con exito</p>`;
+            modalMessage.innerHTML = `<p>El archivo:</p> ${displayList} <p>(no) se ha subido con exito</p>`;
             modal.style.display = "block";
         } else {
-            modalMessage.innerHTML = `<p>los archivos:</p> ${displayList} <p>se han subido con exito</p>`;
+            modalMessage.innerHTML = `<p>Los archivos:</p> ${displayList} <p>(no) se han subido con exito</p>`;
             modal.style.display = "block";
         }
     } else {
         modal.style.display = "block";
-        modalMessage.innerHTML = `<p>algo ha ido mal... :(</p>`;
+        modalMessage.innerHTML = `<h3>Ups, algo ha ido mañ</h3><br><p>No hemos podido subir tu archivo, revisa el formato o bien einténtalo de nuevo</p>`;
     }
 }
 
